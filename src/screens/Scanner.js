@@ -174,6 +174,7 @@ class CameraScanner extends Component {
                 const actualLatitude = this.state.location.coords.latitude;
                 const time = separatedString[2];
                 const actualTime = moment().format('DD/MM/YYYY HH:mm');
+                console.log(this.getDistanceFromLatLonInKm(latitude, longitude, actualLatitude, actualLongitude));
                 if (time.length > 0) {
                     if (this.getDistanceFromLatLonInKm(latitude, longitude, actualLatitude, actualLongitude) < MAXIMUM_RADIUS
                         && Math.abs(moment(time).diff(moment(actualTime), 'minutes')) < MAXIMUM_TIME_DIFFERENCE) {

@@ -158,7 +158,7 @@ export default class Notepad extends Component {
 				</View>
 				<View style={styles.pad}>
 					{this.renderNotepad()}
-					<Button 
+														<Button 
 					raised
 					iconRight={{name: 'exit-to-app'}}
 					title='Get me out!'
@@ -168,6 +168,7 @@ export default class Notepad extends Component {
 					onPress={this.props.exitToApp}
 					/>
 				</View>
+
 			</Animated.View>
 		</View>
 		);
@@ -201,7 +202,6 @@ const styles = {
 	buttonContainerStyle: {
 		borderRadius: 5,
 		margin:NOTEPAD_WIDTH*0.025,
-		position: 'absolute',
 		bottom: 0,
 		width: NOTEPAD_WIDTH*0.90,
 	},
